@@ -1,0 +1,300 @@
+system,question,answerable,correct,complete,faithful,latency_s,answer
+baseline,What types of services are covered by Rural Health Clinics (RHCs) under Medicare?,True,True,True,True,2.97,"Rural Health Clinics (RHCs) under Medicare cover the following types of services:
+
+- Physician services
+- Services and supplies furnished incident to a physician’s services
+- Services provided by nurse practitioners (NP), physician assistants (PA), certified nurse midwives (CNM), clinical psychologists (CP), clinical social workers (CSW), and marriage and family therapists (MFT)
+- Medically necessary primary health services
+- Qualified preventive health services [1]."
+agent,What types of services are covered by Rural Health Clinics (RHCs) under Medicare?,True,True,True,True,4.51,"Rural Health Clinics (RHCs) under Medicare cover the following types of services: 
+
+1. Physician services.
+2. Services and supplies furnished incident to a physician’s services.
+3. Services provided by nurse practitioners (NP), physician assistants (PA), certified nurse midwives (CNM), clinical psychologists (CP), clinical social workers (CSW), and marriage and family therapists (MFT) [2]. 
+
+These services must be medically necessary primary health services and qualified preventive health services [2]."
+baseline,What should a provider do if an item or service does not meet the definition of Medicare-covered benefits under Part B?,True,True,True,True,2.15,"If an item or service does not meet the definitional requirements of any Medicare-covered benefit under Part B, then the item or service is not covered by Medicare, and an Advance Beneficiary Notice (ABN) is not required to shift the liability to the beneficiary. However, the provider may choose to provide voluntary notification for these items or services [5]."
+agent,What should a provider do if an item or service does not meet the definition of Medicare-covered benefits under Part B?,True,True,False,True,5.22,"If an item or service does not meet the definition of Medicare-covered benefits under Part B, the provider must not submit a claim to Medicare for that item or service, as Medicare payment is prohibited for items and services that are excluded from coverage [2]. Additionally, if the provider is an excluded physician or practitioner, they must comply with the regulations regarding exclusions and cannot receive payment for services rendered after the effective date of the exclusion [3]."
+baseline,"Are psychological tests covered by Medicare, and are there any specific conditions for their payment?",True,True,True,True,2.66,"Yes, psychological tests and neuropsychological tests are covered by Medicare under section 1861(s)(3) of the Social Security Act. Payment for these tests is authorized under section 1842(b)(2)(A) of the Social Security Act. However, there are specific conditions for their payment:
+
+1. The tests must be billed using the appropriate CPT codes (96102, 96103, 96119, and 96120) and reflect a site of service payment differential for facility and non-facility settings.
+2. There is no payment for diagnostic tests performed on an ""incident to"" basis.
+3. Services performed by students or trainees are not covered, although a physician or qualified professional can still be paid if they perform the test while a student or trainee is present.
+4. Certain CPT codes (96101 and 96118) can only be paid separately if billed for different and separate tests on the same date of service as other specified codes [1][2][3]."
+agent,"Are psychological tests covered by Medicare, and are there any specific conditions for their payment?",True,True,True,True,3.89,"Yes, psychological tests and neuropsychological tests are covered by Medicare under section 1861(s)(3) of the Social Security Act, and payment is authorized under section 1842(b)(2)(A) of the Social Security Act [2]. However, there are specific conditions for their payment: payment is not authorized for diagnostic tests when performed on an ""incident to"" basis, and all diagnostic tests are assigned a certain level of supervision [2]."
+baseline,Are off-label uses of FDA-approved drugs covered by Medicare?,True,True,True,True,1.54,"Yes, off-label uses of FDA-approved drugs may be covered by Medicare if the carrier determines the use to be medically accepted, taking into consideration major drug compendia, authoritative medical literature, and/or accepted standards of medical practice. Specifically, for drugs used in an anti-cancer chemotherapeutic regimen, off-label uses are covered for a medically accepted indication as defined in the relevant guidelines [2]."
+agent,Are off-label uses of FDA-approved drugs covered by Medicare?,True,True,True,True,3.73,"Yes, off-label uses of FDA-approved drugs may be covered by Medicare if they are used for medically accepted indications, particularly in the context of anti-cancer chemotherapeutic regimens. This determination is made on a case-by-case basis by the contractor, taking into account major drug compendia, authoritative medical literature, and accepted standards of medical practice [3][5]."
+baseline,What is the definition of emergency and urgent care services according to CMS?,True,True,True,True,1.53,"According to CMS, emergency services are defined as services furnished to an individual who has an emergency medical condition as defined in 42 CFR 424.101. Urgent care services are defined as services furnished within 12 hours in order to avoid the likely onset of an emergency medical condition. For example, treatment for an ear infection with significant pain would be considered urgent care to avoid adverse consequences, even though it does not meet the definition of an emergency medical condition [1][2]."
+agent,What is the definition of emergency and urgent care services according to CMS?,True,True,True,True,3.71,"Emergency services are defined as services furnished to an individual who has an emergency medical condition as defined in 42 CFR 424.101 [1]. Urgent Care Services are defined as services furnished within 12 hours in order to avoid the likely onset of an emergency medical condition [1]. While emergency care is for conditions that place the health of the individual in serious jeopardy, urgent care is for situations that require treatment within a relatively short period to avoid adverse consequences, even if they do not meet the definition of an emergency medical condition [2]."
+baseline,What must RHCs and FQHCs do if they lease space to another entity?,True,True,True,True,1.33,"If RHCs and FQHCs lease space to another entity, all costs associated with the leased space must be carved out of the cost report [1]."
+agent,What must RHCs and FQHCs do if they lease space to another entity?,True,True,True,True,2.82,"If RHCs and FQHCs lease space to another entity, all costs associated with the leased space must be carved out of the cost report [1]."
+baseline,Are the medical services of interns or residents-in-training covered under Medicare for skilled nursing facility (SNF) inpatients?,True,True,True,True,1.15,"Yes, the medical services of interns or residents-in-training are covered under Medicare for skilled nursing facility (SNF) inpatients, provided that the services are furnished by interns and residents of a hospital with which the facility has a required transfer agreement [1]."
+agent,Are the medical services of interns or residents-in-training covered under Medicare for skilled nursing facility (SNF) inpatients?,True,True,True,True,2.72,"Yes, the medical services of an intern or resident-in-training under an approved teaching program of a hospital with which the skilled nursing facility has a required transfer agreement are covered under Medicare for SNF inpatients [2]."
+baseline,What diabetes-related items does Medicare cover?,True,True,True,True,1.4,"Medicare covers the following diabetes-related items:
+
+1. Insulin used with insulin pumps and the pumps themselves as durable medical equipment.
+2. Glucose monitors and continuous glucose monitors used to measure blood glucose levels.
+3. Related supplies for glucose monitoring.
+4. One pair of extra-depth or custom-molded shoes per year, along with inserts or shoe modifications for individuals with specific diabetes-related foot problems [5]."
+agent,What diabetes-related items does Medicare cover?,True,True,True,True,5.22,"Medicare covers several diabetes-related items, including:
+
+1. **Insulin and Supplies**: Medicare drug coverage (Part D) may cover insulin you inject yourself, certain medical supplies used for insulin injections (like syringes), disposable pumps, and some oral diabetes drugs. The cost of a one-month supply of each covered insulin product is no more than $35, and similar cost limits apply for traditional insulin used in Part B-covered insulin pumps [1][4].
+
+2. **Diabetes Screenings**: Medicare covers up to 2 blood glucose laboratory test screenings each year if your doctor determines you’re at risk for developing diabetes. You pay nothing for the test if your doctor or other health care provider accepts assignment [1].
+
+3. **Diabetes Self-Management Training**: Medicare covers diabetes outpatient self-management training to teach you to manage your diabetes, which may include tips for healthy eating, being active, monitoring blood glucose, taking prescription drugs, and reducing risks. You must have been diagnosed with diabetes and have a written order from your doctor or other health care provider. You pay 20% of the Medicare-approved amount, and the Part B deductible applies [2][5].
+
+4. **Medical Nutrition Therapy Services**: You may also be eligible for medical nutrition therapy services [5].
+
+5. **Diabetes Prevention Program**: If you find out you have prediabetes, you may be eligible for the Medicare Diabetes Prevention Program [1][5].
+
+These services and items are subject to certain conditions, such as having a diagnosis of diabetes and a written order from a healthcare provider."
+baseline,What criteria must be met for skilled physical therapy services to be considered reasonable and necessary for a patient?,True,True,True,True,2.68,"Skilled physical therapy services must meet the following criteria to be considered reasonable and necessary for a patient:
+
+1. The patient must have a reasonable potential to improve materially in a predictable period of time, or the services must be necessary for establishing a safe and effective maintenance program.
+2. The services must require the skills of a qualified therapist for safe and effective performance.
+3. The services must be considered specific and effective treatment for the patient’s condition under accepted medical standards.
+4. The services must be reasonable and necessary for the treatment of the patient’s condition, including the amount, frequency, and duration of the services being reasonable [1][2][4]."
+agent,What criteria must be met for skilled physical therapy services to be considered reasonable and necessary for a patient?,True,True,True,True,3.79,"To be considered reasonable and necessary for a patient, skilled physical therapy services must meet the following criteria:
+
+1. The services must be considered under accepted standards of medical practice to be a specific and effective treatment for the patient’s condition [3].
+2. The services must be reasonable and necessary for the treatment of the patient’s condition, which includes the requirement that the amount, frequency, and duration of the services must be reasonable [5].
+3. The patient must show potential for improvement in a reasonable and generally predictable period of time, or the services must be necessary for establishing a safe and effective maintenance program [5].
+
+Additionally, services must be provided by qualified professionals and must not be unskilled services, which include palliative procedures or activities that do not meet the requirements for covered therapy services [2][3]."
+baseline,What happens to my Medigap Open Enrollment Period if I delay signing up for Part B due to having group health coverage?,True,True,False,True,1.23,"If you delay signing up for Part B because you have group health coverage based on your (or your spouse’s) current employment, your Medigap Open Enrollment Period won’t start until you get Part B [1]."
+agent,What happens to my Medigap Open Enrollment Period if I delay signing up for Part B due to having group health coverage?,True,True,True,True,3.48,"If you delay signing up for Part B because you have group health coverage based on your (or your spouse’s) current employment, your Medigap Open Enrollment Period won’t start until you get Part B [1]."
+baseline,What types of services are covered by an Ambulatory Surgical Center (ASC)?,True,True,True,True,1.84,"Ambulatory Surgical Center (ASC) services cover facility services furnished in connection with certain surgical procedures. These include:
+
+1. Nursing services and services of technical personnel who are employees of the ASC.
+2. Use of the ASC’s facilities, such as operating and recovery rooms, patient preparation areas, and waiting rooms.
+3. Drugs, biologicals, surgical dressings, supplies, splints, casts, appliances, and equipment commonly furnished by the ASC in connection with surgical procedures, with certain limitations on drugs and biologicals that cannot be self-administered [1][4][5]. 
+
+Additionally, the ASC must be certified and enter into a written agreement with CMS to provide these services [2]."
+agent,What types of services are covered by an Ambulatory Surgical Center (ASC)?,True,True,True,True,5.02,"Ambulatory Surgical Centers (ASCs) cover facility services furnished in connection with certain surgical procedures under Part B, provided the ASC is certified and has a written agreement with CMS [2]. The types of services covered include:
+
+1. Nursing services and services of technical personnel involved in patient care [5].
+2. Use of the ASC's facilities, including operating and recovery rooms, patient preparation areas, and waiting rooms [5].
+3. Drugs and biologicals that cannot be self-administered, as well as surgical dressings, supplies, splints, casts, appliances, and equipment commonly furnished by the ASC in connection with surgical procedures [5].
+
+Additionally, the ASC must accept Medicare's payment for covered procedures as payment in full [2]. However, there are exceptions, such as limitations on the types of drugs and biologicals covered [5]."
+baseline,What are the criteria for Medicare coverage of Partial Hospitalization Programs (PHPs)?,True,True,True,True,2.97,"The criteria for Medicare coverage of Partial Hospitalization Programs (PHPs) include the following:
+
+1. PHPs must be provided by a hospital outpatient department or a Medicare-certified Community Mental Health Center (CMHC) [1].
+2. Patients must be under the care of a physician who certifies the need for partial hospitalization, including a minimum of 20 hours per week of therapeutic services, as evidenced by their plan of care [2].
+3. Patients require a comprehensive, structured, multimodal treatment that necessitates medical supervision and coordination due to a mental disorder (including Substance Use Disorder) that severely interferes with multiple areas of daily life, such as social, vocational, and/or educational functioning [2].
+4. Patients must be able to cognitively and emotionally participate in the active treatment process and tolerate the intensity of a PHP program [2].
+5. Patients must meet one of two benefit category requirements: either they are discharged from an inpatient hospital treatment program and the PHP is in lieu of continued inpatient treatment, or they would be at reasonable risk of requiring inpatient hospitalization in the absence of partial hospitalization [2][4].
+
+Additionally, the treatment goals should be measurable, functional, time-framed, medically necessary, and directly related to the reason for admission [3]. Programs that primarily provide diversionary activities, social, or recreational therapy do not qualify for Medicare coverage [3][5]."
+agent,What are the criteria for Medicare coverage of Partial Hospitalization Programs (PHPs)?,True,True,True,True,6.35,"Medicare coverage of Partial Hospitalization Programs (PHPs) requires that the programs be provided by a hospital outpatient department or a Medicare-certified Community Mental Health Center (CMHC) [1]. The following criteria must also be met:
+
+1. **Physician Certification**: A physician must certify the need for partial hospitalization, including a minimum of 20 hours per week of therapeutic services, as evidenced by a plan of care [2].
+
+2. **Patient Condition**: Patients must have a mental disorder (including Substance Use Disorder) that severely interferes with multiple areas of daily life, such as social, vocational, and/or educational functioning, and this dysfunction should generally be of an acute nature [2].
+
+3. **Cognitive and Emotional Participation**: Patients must be able to cognitively and emotionally participate in the active treatment process and tolerate the intensity of the PHP program [2].
+
+4. **Benefit Category Requirements**: Patients must meet the benefit category requirements for receiving partial hospitalization services as defined in §1861(ff) and §1835(a)(2)(F) of the Social Security Act [4].
+
+5. **Discharge from Inpatient Treatment**: Patients may be those discharged from an inpatient hospital treatment program, or those who, in the absence of partial hospitalization, would be at reasonable risk of requiring inpatient hospitalization [2].
+
+6. **Individualized Treatment Plan**: Services must be provided under an individualized written plan of care established by the physician, which includes active treatment through a combination of structured, intensive services [5].
+
+Exceptions include patients who cannot tolerate the intensity of a PHP or those receiving treatment for chronic conditions without acute exacerbation of symptoms [5]. Programs that primarily offer social, recreational, or diversionary activities do not qualify for Medicare coverage [3]."
+baseline,What types of services are generally covered for the treatment of psychiatric patients under Medicare?,True,True,True,True,1.83,"Under Medicare, the types of services generally covered for the treatment of psychiatric patients include:
+
+1. Individual and group therapy with physicians, psychologists, or other mental health professionals.
+2. Occupational therapy services performed by or under the supervision of a qualified occupational therapist.
+3. Services of social workers, trained psychiatric nurses, and other staff trained to work with psychiatric patients.
+4. Drugs and biologicals furnished to outpatients for therapeutic purposes, provided they cannot be self-administered.
+5. Activity therapies that are individualized and essential for the treatment of the patient's condition.
+6. Family counseling services.
+
+These services must be reasonable and necessary for the diagnosis or treatment of the patient's condition and provided under an individualized treatment plan established by a physician [1][2][4]."
+agent,What types of services are generally covered for the treatment of psychiatric patients under Medicare?,True,True,True,True,4.52,"Medicare generally covers the following services for the treatment of psychiatric patients:
+
+1. Outpatient mental health care services, including counseling or psychotherapy, which can be provided individually, in group settings, or with family, and in crisis situations [1].
+2. Visits with various qualified mental health professionals, such as psychiatrists, clinical psychologists, marriage and family therapists, mental health counselors, clinical nurse specialists, clinical social workers, nurse practitioners, or physician assistants [1].
+3. Partial hospitalization services provided by Community Mental Health Centers or hospitals, which offer intensive psychiatric care in an outpatient setting [1].
+4. Inpatient mental health care services in a hospital setting, also referred to as psychiatric care [2].
+
+It is important to note that there may be deductibles and coinsurance applicable to these services, and certain limitations may apply, such as the outpatient psychiatric services limitation, which affects the reimbursement for services provided by qualified clinical social workers [4]."
+baseline,What should be considered when determining if skilled therapy services can be provided effectively in an outpatient setting?,True,True,True,True,2.9,"When determining if skilled therapy services can be provided effectively in an outpatient setting, several factors should be considered:
+
+1. **Patient's Condition**: The patient's medical condition and the potential for improvement must be evaluated. There should be an expectation that the patient's condition will improve significantly in a reasonable and generally predictable period of time, or the services must be necessary for establishing a safe and effective maintenance program [4].
+
+2. **Availability of Supervision**: The ability to provide sufficient supervision and assistance is crucial. For instance, if a patient is at risk for further injury and sufficient supervision cannot be arranged in their home, then inpatient services may be more appropriate [1].
+
+3. **Skills Required**: It must be determined whether the services require the skills of a qualified therapist or if they can be safely and effectively carried out by nonskilled personnel. If the latter is true, then the services would not be classified as rehabilitative therapy services [3].
+
+4. **Alternative Facilities**: The availability of alternative facilities or services, such as home health agencies or outpatient facilities, should also be considered, as these may not always be accessible when needed [1].
+
+5. **Reasonableness and Necessity**: The services must be considered reasonable and necessary for the treatment of the patient’s condition, including the amount, frequency, and duration of the services [2].
+
+These factors collectively help in assessing whether outpatient therapy is appropriate for a patient."
+agent,What should be considered when determining if skilled therapy services can be provided effectively in an outpatient setting?,True,True,True,True,4.71,"When determining if skilled therapy services can be provided effectively in an outpatient setting, several factors should be considered:
+
+1. The patient's need for skilled care, which is based on the complexity of the therapy services required and whether they can be safely and effectively performed only by, or under the supervision of, a qualified therapist [3].
+2. The availability of alternative facilities or services, such as home health agencies or outpatient facilities, which may not always be accessible or available when needed, especially in rural communities [1].
+3. The potential for the patient to improve their condition, as coverage for skilled therapy services does not solely depend on the potential for improvement but rather on the need for skilled care [3].
+4. The risk of further injury or complications if the patient were to receive therapy in an outpatient setting, particularly if sufficient supervision and assistance cannot be arranged [1].
+5. The expectation that the patient's condition will improve significantly in a reasonable period of time, or that the services are necessary for establishing a safe and effective maintenance program [5].
+
+These considerations help ensure that the therapy services provided are appropriate and effective for the patient's specific needs and circumstances."
+baseline,What happens if a physician who has opted out of Medicare provides services without a proper Advance Beneficiary Notice (ABN)?,True,True,True,True,1.54,"If a physician who has opted out of Medicare provides services without a proper Advance Beneficiary Notice (ABN), they may collect from the beneficiary the full charge if Medicare denies the claim. Additionally, opt-out physicians are prohibited from submitting claims to Medicare, except for emergency or urgent care services furnished to a beneficiary with whom they did not have a private contract [1]."
+agent,What happens if a physician who has opted out of Medicare provides services without a proper Advance Beneficiary Notice (ABN)?,True,True,True,True,3.59,"If a physician who has opted out of Medicare provides services without a proper Advance Beneficiary Notice (ABN), they may collect from the beneficiary the full charge if Medicare denies the claim. However, opt-out physicians are prohibited from submitting claims to Medicare, except for emergency or urgent care services furnished to a beneficiary with whom they did not have a private contract [1]."
+baseline,Under what circumstances might Medicare have previously covered doses of a drug that is usually self-administered?,True,True,True,True,1.21,Medicare may have previously covered doses of a drug that is usually self-administered during a brief time when the patient is being trained under the supervision of a physician in the proper technique for self-administration [2].
+agent,Under what circumstances might Medicare have previously covered doses of a drug that is usually self-administered?,True,True,False,True,3.75,"Medicare might have previously covered doses of a drug that is usually self-administered if the drug was administered in a manner that did not fall under the self-administration exclusion, such as when it was provided ""incident to"" a physician's service. Additionally, prior to August 1, 2002, the determination of whether a drug was subject to the self-administered exclusion was influenced by whether the FDA label contained instructions for self-administration, which is no longer a sole determining factor under the new standard [2][4]. Furthermore, if the drug was administered on an inpatient basis, the self-administration status would not be considered, allowing for coverage in those cases [3]."
+baseline,"If a beneficiary is admitted to the hospital for a covered service but later receives a non-covered transplant during the same stay, will the original services be covered?",True,True,True,True,1.11,"Yes, if the original admission was entirely unrelated to the diagnosis that led to a recommendation for a non-covered transplant or implant, the services related to the admitting condition would be covered [1]."
+agent,"If a beneficiary is admitted to the hospital for a covered service but later receives a non-covered transplant during the same stay, will the original services be covered?",True,True,True,True,4.61,"If a beneficiary is admitted to the hospital for covered services and later receives a non-covered transplant during the same stay, the original services will be covered if the admission was entirely unrelated to the diagnosis that led to the recommendation for the non-covered transplant or implant. However, if the services could reasonably be attributed to preparation for the non-covered transplant, then those services would be considered ""related to"" non-covered services and would not be covered [3]."
+baseline,What should I do if my Medicare plan limits my coverage of prescription opioids or benzodiazepines?,True,True,False,True,1.64,"If your Medicare plan limits your coverage of prescription opioids or benzodiazepines, the plan will send you a letter explaining their review and may place you in a Drug Management Program. You and your doctor have the right to appeal these limitations if you disagree with the plan’s decision. The letter will also provide information on how to contact the plan if you have questions or would like to appeal [1]."
+agent,What should I do if my Medicare plan limits my coverage of prescription opioids or benzodiazepines?,True,True,True,True,4.1,"If your Medicare plan limits your coverage of prescription opioids or benzodiazepines, the plan will send you a letter explaining their review and may place you in a Drug Management Program. You and your doctor have the right to appeal these limitations if you disagree with the plan’s decision. The letter will also provide information on how to contact the plan if you have questions or would like to appeal [1]. Additionally, if you or your prescriber believe that your plan should waive one of these coverage rules, you can ask for an exception [2]."
+baseline,What types of services and items are covered by Medicare during a hospital outpatient visit?,True,True,True,True,1.74,"Medicare covers approved procedures during a hospital outpatient visit, including services like X-rays, casts, stitches, and outpatient surgeries. Additionally, it covers medically necessary evaluation and treatment for physical therapy services aimed at improving or maintaining function. For these services, you typically pay 20% of the Medicare-approved amount, and a copayment may apply for each service received in a hospital outpatient setting. The Part B deductible also applies, and you are responsible for all costs for items or services that Medicare does not cover [1][5]."
+agent,What types of services and items are covered by Medicare during a hospital outpatient visit?,True,True,True,True,4.1,"Medicare covers both diagnostic and therapeutic services furnished by hospitals to outpatients during a hospital outpatient visit [4]. However, there are limitations on coverage for certain services, and Medicare Part B does not pay for items or services furnished to a hospital outpatient by an entity other than the hospital unless the hospital has arrangements with that entity [3]. Exceptions to these limitations include physicians' professional services that are personally furnished to an individual beneficiary by a physician and contribute directly to the diagnosis or treatment of the patient [3]."
+baseline,Will Medicare cover counseling sessions with my primary care doctor?,True,True,True,True,1.23,"Yes, Medicare will cover counseling sessions with your primary care doctor or health care provider in a primary care setting, such as a doctor's office. You pay nothing for these services if your primary care doctor or other health care provider accepts assignment [1]."
+agent,Will Medicare cover counseling sessions with my primary care doctor?,True,True,True,True,3.69,"Yes, Medicare will cover counseling sessions with your primary care doctor or health care provider in a primary care setting, like a doctor’s office. However, Medicare won’t cover counseling as a preventive service in an inpatient setting, such as a skilled nursing facility. You pay nothing for these services if your primary care doctor or other health care provider accepts assignment [1]."
+baseline,"What Part B services can IHS facilities, providers, and suppliers bill Medicare for during the specified 5-year period?",True,True,True,True,1.68,"IHS facilities, providers, and suppliers can bill Medicare for the following Part B services during the specified 5-year period beginning January 1, 2005:
+
+- Durable medical equipment
+- Prosthetics and orthotics
+- Prosthetic devices
+- Therapeutic shoes
+- Surgical dressings and splint casts
+- Drugs (Part B and DMERC)
+- Clinical laboratory services
+- Ambulance services
+- Screening and preventive services not already covered [1]."
+agent,"What Part B services can IHS facilities, providers, and suppliers bill Medicare for during the specified 5-year period?",True,True,True,True,4.71,"IHS facilities, providers, and suppliers can bill Medicare for the following Part B services during the specified 5-year period beginning January 1, 2005:
+
+1. Durable medical equipment
+2. Prosthetics and orthotics
+3. Prosthetic devices
+4. Therapeutic shoes
+5. Surgical dressings and splint casts
+6. Drugs (Part B and DMERC)
+7. Clinical laboratory services
+8. Ambulance services
+9. Screening and preventive services not already covered [1]."
+baseline,What types of services are covered under Medicare Part B for ambulatory surgical centers?,True,True,True,True,1.33,"Medicare Part B covers facility service fees related to approved surgical procedures performed in ambulatory surgical centers (ASCs). This includes services for certain surgical procedures, outpatient physical therapy, outpatient occupational therapy, and outpatient speech-language pathology services. Additionally, Medicare covers some bariatric surgical procedures, like gastric bypass surgery and laparoscopic banding surgery, when specific conditions are met. However, for procedures not covered by Medicare, you would be responsible for all facility service fees [1][2][4]."
+agent,What types of services are covered under Medicare Part B for ambulatory surgical centers?,True,True,True,True,4.4,"Medicare Part B covers facility service fees related to approved surgical procedures performed in ambulatory surgical centers (ASCs) [2]. These services include outpatient surgical services, and the patient is expected to be released within 24 hours [2]. However, the patient is responsible for paying 20% of the Medicare-approved amount for both the ASC and the doctor who treats them, and the Part B deductible applies [2]. Additionally, coverage is tied to specific surgical procedures listed by CMS, which is updated periodically [5]. Services not covered by Medicare in ASCs must be paid entirely by the patient [2]."
+baseline,What are the criteria for a woman to qualify for a covered Pap smear under Medicare?,True,True,False,True,2.19,"A woman can qualify for a covered Pap smear under Medicare if she meets one of the following criteria:
+
+1. She is at high risk for cervical or vaginal cancer.
+2. She is of childbearing age and has had a Pap smear during any of the preceding three years indicating the presence of cervical or vaginal cancer or other abnormality.
+
+Additionally, for women who do not qualify for more frequent screenings, payment is made for a screening Pap smear only after at least 23 months have passed since the last covered screening Pap smear [1][3]."
+agent,What are the criteria for a woman to qualify for a covered Pap smear under Medicare?,True,True,True,True,5.01,"A woman qualifies for a covered Pap smear under Medicare if she meets one of the following criteria: 
+
+1. She has not had a screening Pap smear test during the preceding three years (i.e., 35 months have passed since her last covered screening Pap smear) [2].
+2. She is at high risk for cervical or vaginal cancer [2].
+3. She is of childbearing age and has had a Pap smear during any of the preceding three years indicating the presence of cervical or vaginal cancer or other abnormality [2].
+
+Additionally, for women at high risk or who qualify under the childbearing provision, payment is not made for a screening Pap smear more frequently than once every 11 months after the month of the last covered screening Pap smear [3]. For claims with dates of service on or after July 1, 2001, if the beneficiary does not qualify for more frequent screenings, Medicare will pay for the screening Pap smear only after at least 23 months have passed since the last covered screening Pap smear [3]."
+baseline,What costs do Medigap plans help cover for Medicare beneficiaries?,True,True,True,True,1.48,"Medigap plans help cover out-of-pocket costs for Medicare Part A and Part B, including copayments, coinsurance, and deductibles for covered Medicare services. Specifically, they may cover costs such as Medicare Part A coinsurance and hospital costs, Medicare Part A hospice care coinsurance or copayment, Medicare Part A deductible, skilled nursing facility care coinsurance, blood (first 3 pints), Medicare Part B coinsurance or copayment, and Medicare Part B deductible [1][2]."
+agent,What costs do Medigap plans help cover for Medicare beneficiaries?,True,True,True,True,4.2,"Medigap plans help cover out-of-pocket costs for Medicare beneficiaries, including copayments, coinsurance, and deductibles for covered Medicare services. Specifically, they cover costs such as Medicare Part A coinsurance and hospital costs, Medicare Part A hospice care coinsurance or copayment, Medicare Part A deductible, skilled nursing facility care coinsurance, blood (first 3 pints), Medicare Part B coinsurance or copayment, and Medicare Part B deductible [1]. However, Medigap generally does not cover long-term care, vision or dental services, hearing aids, eyeglasses, or private-duty nursing [4]."
+baseline,What criteria must a psychologist meet to be considered as practicing independently under Medicare?,True,True,True,True,2.15,"A psychologist must meet the following criteria to be considered as practicing independently under Medicare:
+
+1. They must render services on their own responsibility, free of the administrative and professional control of an employer such as a physician, institution, or agency.
+2. The persons they treat must be their own patients.
+3. They must have the right to bill directly, collect, and retain the fee for their services.
+
+Additionally, if a psychologist practices in an office located in an institution, they may still be considered independently practicing if:
+- The office is confined to a separately-identified part of the facility used solely as the psychologist’s office.
+- The psychologist conducts a private practice, rendering services to patients from outside the institution as well as to institutional patients [1]."
+agent,What criteria must a psychologist meet to be considered as practicing independently under Medicare?,True,True,True,True,4.15,"A psychologist is considered to be practicing independently under Medicare if they meet the following criteria:
+
+1. They render services on their own responsibility, free of the administrative and professional control of an employer such as a physician, institution, or agency.
+2. The persons they treat are their own patients.
+3. They have the right to bill directly, collect, and retain the fee for their services [3]. 
+
+Additionally, a psychologist practicing in an office located in an institution may still be considered independently practicing if:
+- The office is confined to a separately-identified part of the facility used solely as the psychologist’s office and cannot be construed as extending throughout the entire institution.
+- The psychologist conducts a private practice, meaning services are rendered to patients from outside the institution as well as to institutional patients [3]."
+baseline,Does Medicare Part B cover services provided to hospital outpatients by entities other than the hospital?,True,True,True,True,1.16,"No, Medicare Part B does not cover services provided to hospital outpatients by entities other than the hospital unless the hospital has arrangements with that entity to furnish those services to its patients [1]."
+agent,Does Medicare Part B cover services provided to hospital outpatients by entities other than the hospital?,True,True,True,True,3.99,Medicare Part B does not pay for any item or service furnished to a hospital outpatient by an entity other than the hospital unless the hospital has arrangements with that entity to furnish that particular service to its patients [1]. The arrangements must ensure that Medicare payment made to the hospital discharges the liability of the beneficiary or any other person to pay for those services [1].
+baseline,What is the difference between the Initial Preventive Physical Examination (IPPE) and the Annual Wellness Visit (AWV) in terms of eligibility and billing?,True,True,True,True,3.43,"The Initial Preventive Physical Examination (IPPE) and the Annual Wellness Visit (AWV) differ in terms of eligibility and billing as follows:
+
+1. **Eligibility**:
+   - The IPPE is available to beneficiaries within the first 12 months following their enrollment in Medicare Part B. It is a one-time exam that must occur during this period [1].
+   - The AWV, on the other hand, is for beneficiaries who are no longer within the first 12 months of their first Part B coverage period and who have not received either an IPPE or an AWV within the past 12 months [2][3].
+
+2. **Billing**:
+   - The IPPE can be billed as a stand-alone visit if it is the only medical service provided on that day with an RHC or FQHC practitioner. If it is furnished on the same day as another billable visit, it cannot be billed separately [1][5].
+   - The AWV can also be billed as a stand-alone visit if it is the only medical service provided on that day with an RHC or FQHC practitioner. However, if the AWV is furnished on the same day as another medical visit, it is not separately billable [3][4].
+
+In both cases, the beneficiary's coinsurance and deductible are waived [1][2]."
+agent,What is the difference between the Initial Preventive Physical Examination (IPPE) and the Annual Wellness Visit (AWV) in terms of eligibility and billing?,True,True,True,True,3.99,"The Initial Preventive Physical Examination (IPPE) is available for individuals who are within the first 12 months of their first Medicare Part B coverage period, while the Annual Wellness Visit (AWV) is for individuals who are no longer within that 12-month period and have not received either an IPPE or an AWV within the past 12 months [1][3]. 
+
+In terms of billing, the AWV can be billed as a stand-alone visit if it is the only medical service provided on that day, but if it is furnished on the same day as another medical visit, it is not separately billable [3]. For both visits, Medicare coinsurance and Part B deductibles do not apply [1][2]."
+baseline,Are surgical dressings covered under Medicare Part B if obtained by the patient after surgery?,True,True,True,True,1.23,"Yes, surgical dressings are covered under Medicare Part B if obtained by the patient after surgery, provided they are obtained on a physician's order from a supplier, such as a drugstore [1][3]."
+agent,Are surgical dressings covered under Medicare Part B if obtained by the patient after surgery?,True,True,True,True,3.62,"Yes, surgical dressings are covered under Medicare Part B if obtained by the patient after surgery, provided they are obtained on a physician's order from a supplier, such as a drugstore [1][5]."
+baseline,What are the requirements for therapy services to be covered under Medicare?,True,True,True,True,2.16,"For therapy services to be covered under Medicare, the following requirements must be met:
+
+1. The service must have a benefit category in the statute.
+2. The service must not be excluded.
+3. The service must be considered reasonable and necessary, meaning it should be a specific and effective treatment for the patient’s condition under accepted standards of medical practice.
+
+Additionally, outpatient therapy services must be furnished in accordance with certain conditions, which include being skilled therapy services rendered by qualified professionals or personnel who meet the qualification standards. Services that are unskilled or not appropriate to the setting or conditions are not covered [1][4][5]."
+agent,What are the requirements for therapy services to be covered under Medicare?,True,True,True,True,6.35,"To be covered under Medicare, therapy services must meet the following requirements:
+
+1. The services must be skilled therapy services as described in the relevant Medicare manuals [3].
+2. They must be rendered under the conditions specified in those manuals [3].
+3. Services provided by professionals or personnel who do not meet the qualification standards are considered unskilled and are not covered [3].
+4. Services must not be palliative procedures that are repetitive or merely reinforce previously learned skills, nor should they maintain function after a maintenance program has been developed [3].
+5. Services must be provided under a therapy plan of care and by qualified staff who are appropriately supervised [4].
+6. The services must be considered reasonable and necessary, meaning they should be specific and effective treatments for the patient's condition according to accepted standards of medical practice [4].
+7. Documentation must be legible, relevant, and sufficient to justify the services billed, complying with all legal and regulatory requirements applicable to Medicare claims [5].
+
+Exceptions may apply based on specific circumstances or additional policies outlined in Medicare manuals."
+baseline,Can RHC and FQHC practitioners provide telehealth services from their home?,True,True,True,True,1.13,I don't know.
+agent,Can RHC and FQHC practitioners provide telehealth services from their home?,True,True,True,True,3.02,"Yes, RHC and FQHC practitioners can provide distant site telehealth services from any location in the United States, including their home, during the time that they are employed by or under contract with the RHC or FQHC [5]."
+baseline,What happens if a nonparticipating physician or practitioner does not timely file the required affidavit after opting out of Medicare?,True,True,True,True,1.23,"If a nonparticipating physician or practitioner does not timely file the required affidavit after opting out of Medicare, the 2-year opt-out period begins when the last such affidavit is filed. Any private contract entered into before the last required affidavit is filed becomes effective upon the filing of the last required affidavit, and any items or services furnished to a Medicare beneficiary under such contract before the last required affidavit is filed are subject to standard Medicare rules [2]."
+agent,What happens if a nonparticipating physician or practitioner does not timely file the required affidavit after opting out of Medicare?,True,True,True,True,3.6,"If a nonparticipating physician or practitioner does not timely file any required affidavit after opting out of Medicare, the 2-year opt-out period begins when the last such affidavit is filed. Any private contract entered into before the last required affidavit is filed becomes effective upon the filing of the last required affidavit, and any items or services furnished to a Medicare beneficiary under such contract before the last required affidavit is filed are subject to standard Medicare rules [1]."
+baseline,Who qualifies as a 'Qualified Professional' under Medicare policies?,True,True,True,True,1.54,"A 'Qualified Professional' under Medicare policies includes a physical therapist, occupational therapist, speech-language pathologist, physician, nurse practitioner, clinical nurse specialist, or physician’s assistant, who is licensed or certified by the state to perform therapy services. Additionally, physical therapist assistants (PTA) and occupational therapy assistants (OTA) may also qualify when working under the supervision of a qualified therapist, within the scope of practice allowed by state law [1]."
+agent,Who qualifies as a 'Qualified Professional' under Medicare policies?,True,True,True,True,4.51,"A 'Qualified Professional' under Medicare policies includes a physical therapist, occupational therapist, speech-language pathologist, physician, nurse practitioner, clinical nurse specialist, or physician’s assistant, who is licensed or certified by the state to perform therapy services. Additionally, physical therapist assistants (PTA) and occupational therapy assistants (OTA) may also qualify when working under the supervision of a qualified therapist, within the scope of practice allowed by state law. However, assistants are limited in the services they may provide and may not supervise others [1]."
+baseline,What does it mean for skilled services to be provided on a 'daily basis' in a skilled nursing facility?,True,True,True,True,2.46,"For skilled services to be provided on a ""daily basis"" in a skilled nursing facility (SNF), it means that the services must be needed and provided essentially every day of the week, which is interpreted as at least 5 days a week for skilled rehabilitation services. If therapy services are provided less than 5 days a week, the ""daily"" requirement would not be met. Additionally, the requirement should not be applied so strictly that an isolated break of a day or two without services would disqualify coverage, especially if discharge from the facility would not be practical in such cases [1][2]. The patient must actually need skilled rehabilitation services on each day that the facility offers them, and it is not sufficient for therapy sessions to be scheduled merely to meet the daily requirement unless there is a valid medical reason for the need for daily therapy [2][5]."
+agent,What does it mean for skilled services to be provided on a 'daily basis' in a skilled nursing facility?,True,True,True,True,5.26,"Skilled services must be needed and provided on a ""daily basis,"" which means essentially on a 7-days-a-week basis. However, if a patient requires skilled rehabilitation services, they can meet this requirement by receiving those services on at least 5 days a week. If therapy services are provided less than 5 days a week, the ""daily"" requirement would not be met, unless there is an isolated break of a day or two during which no skilled rehabilitation services are furnished, and discharge from the facility would not be practical due to the patient's condition, such as extreme fatigue [1]. 
+
+Additionally, the daily basis requirement can be satisfied by providing a single type of skilled service every day or by offering various types of skilled services on different days of the week, as long as the patient actually needs those services on each of the days they are available [5]. Arbitrarily scheduling therapy sessions to ensure some type of therapy occurs each day does not meet the requirement; the patient's medical needs must indicate that daily therapy is necessary [5]."
+baseline,Are outpatient physical therapy services covered when provided as group therapy?,True,True,True,True,1.42,"Yes, outpatient physical therapy services are covered when provided as group therapy. Contractors pay for outpatient physical therapy services, including outpatient speech-language pathology services and outpatient occupational therapy services, provided simultaneously to two or more individuals by a practitioner as group therapy services (97150) [1]."
+agent,Are outpatient physical therapy services covered when provided as group therapy?,True,True,True,True,3.48,"Yes, outpatient physical therapy services, including outpatient speech-language pathology services and outpatient occupational therapy services, are covered when provided as group therapy services (97150) to two or more individuals by a practitioner. The individuals can be performing different activities, but the therapist must be in constant attendance [5]."
+baseline,What happens if a physician refuses to certify that a patient requires daily skilled care in a skilled nursing facility (SNF)?,True,True,True,True,1.4,"If a physician or physician extender refuses to certify that a patient requires daily skilled care in a skilled nursing facility (SNF), the services are not covered, and the facility can bill the patient directly. The reason for the refusal must be documented in the SNF’s records. Additionally, if the refusal is based on other grounds, such as an objection in principle to the concept of certification, the SNF cannot charge the beneficiary for covered items or services [1][2]."
+agent,What happens if a physician refuses to certify that a patient requires daily skilled care in a skilled nursing facility (SNF)?,True,True,True,True,13.78,"If a physician or physician extender refuses to certify that a patient requires daily skilled care in a skilled nursing facility (SNF), the services are not covered, and the facility can bill the patient directly for those services. The reason for the refusal must be documented in the SNF’s records. Certifications must be obtained at the time of admission or as soon thereafter as is reasonable and practicable [1]. However, if the refusal is based on other grounds, such as an objection in principle to the concept of certification and recertification, the SNF cannot charge the beneficiary for covered items or services [2]."
+baseline,Are maintenance programs covered by Medicare if they are developed after a rehabilitative therapy program has been completed?,True,True,True,True,1.35,"Maintenance programs are generally not covered by Medicare if they are developed after a rehabilitative therapy program has been completed, unless the patient's safety is at risk. The context states that the services of a qualified professional are not necessary for carrying out a maintenance program under ordinary circumstances, and such programs would be excluded from coverage unless specific conditions are met [1]."
+agent,Are maintenance programs covered by Medicare if they are developed after a rehabilitative therapy program has been completed?,True,True,True,True,3.47,"Maintenance programs developed after a rehabilitative therapy program has been completed are generally not covered by Medicare, as they are not considered reasonable and necessary for the treatment of the patient’s condition. However, an exception exists if the patient’s safety is at risk, in which case the development of a maintenance program may be covered [1]."
+baseline,"What must a physician or NPP include in a therapy plan for a patient receiving PT, OT, or SLP services?",True,True,True,True,1.84,"A physician or NPP must include the following in a therapy plan for a patient receiving PT (Physical Therapy), OT (Occupational Therapy), or SLP (Speech-Language Pathology) services:
+
+1. The type of therapy planned (PT, OT, SLP).
+2. A diagnosis.
+3. Goals for the therapy.
+4. Specific treatment interventions, procedures, modalities, or techniques.
+5. The amount, frequency, and duration of the therapy services.
+6. Measurable and expected outcomes and estimated timetables to achieve these outcomes [3][5]."
+agent,"What must a physician or NPP include in a therapy plan for a patient receiving PT, OT, or SLP services?",True,True,False,True,4.5,"A physician or NPP must include a plan for furnishing therapy services that is established and periodically reviewed. This plan must be documented and certified for coverage and payment of a therapy claim. Additionally, the services must be furnished while the individual is under the care of a physician/NPP, and the therapy must be provided on an outpatient basis [2]."
+baseline,What is the maximum amount I will have to pay for a one-month supply of Part D-covered insulin?,True,True,True,True,0.92,The maximum amount you will have to pay for a one-month supply of Part D-covered insulin is $35 [1].
+agent,What is the maximum amount I will have to pay for a one-month supply of Part D-covered insulin?,True,True,True,True,2.97,The maximum amount you will have to pay for a one-month supply of Part D-covered insulin is $35 [3].
+baseline,What are the criteria for coverage of services provided under the 'incident to' provision for homebound patients?,True,True,True,True,2.36,"The criteria for coverage of services provided under the 'incident to' provision for homebound patients are as follows:
+
+1. The patient must be homebound, meaning they are confined to their home as defined in §60.4.1.
+2. The service must be an integral part of the physician’s service to the patient, and the patient must be one that the physician is treating.
+3. The service must be performed under general physician supervision by employees of the physician or clinic. General supervision means that the physician does not need to be physically present at the patient's place of residence when the service is performed, but the service must be performed under their overall supervision [2]."
+agent,What are the criteria for coverage of services provided under the 'incident to' provision for homebound patients?,True,True,True,True,5.22,"The criteria for coverage of services provided under the 'incident to' provision for homebound patients include the following:
+
+1. The patient must be considered confined to the home as defined in section 1835(a) of the Act and the Medicare Benefit Policy Manual, Chapter 7 [5].
+2. The Rural Health Clinic (RHC) or Federally Qualified Health Center (FQHC) must be located in an area that has a shortage of home health agencies [5].
+3. The services and supplies must be provided under a written plan of treatment [5].
+4. Nursing services must be furnished on a part-time or intermittent basis only [5].
+5. Drugs and biological products must not be provided [5].
+
+Additionally, the services must be medically appropriate and not generate a billable visit if they do not meet the requirements for a medically necessary or qualified preventive health visit [2]."
+baseline,What is the phone number of the Medicare office in Jersey City?,False,True,True,True,0.72,I don't know.
+agent,What is the phone number of the Medicare office in Jersey City?,False,True,True,True,0.72,I answer questions about the loaded Medicare documents. Please ask about them.
+baseline,How much did Medicare spend on advertising in 2025?,False,True,True,True,0.72,I don't know.
+agent,How much did Medicare spend on advertising in 2025?,False,True,True,True,1.44,I answer questions about the loaded Medicare documents. Please ask about them.
+baseline,Does Medicare cover pet insurance for service animals?,False,True,True,True,1.02,I don't know.
+agent,Does Medicare cover pet insurance for service animals?,False,True,True,True,0.99,I answer questions about the loaded Medicare documents. Please ask about them.
+baseline,Who was the first administrator of CMS?,False,True,True,True,0.72,I don't know.
+agent,Who was the first administrator of CMS?,False,True,True,True,0.72,I answer questions about the loaded Medicare documents. Please ask about them.
+baseline,What is the Medicare Part B premium in the year 2035?,False,True,True,True,1.02,I don't know.
+agent,What is the Medicare Part B premium in the year 2035?,False,True,True,True,0.61,I answer questions about the loaded Medicare documents. Please ask about them.

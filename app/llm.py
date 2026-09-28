@@ -12,11 +12,11 @@ def embed(texts: list[str]) -> list[np.ndarray]:
     return [np.array(d.embedding, dtype=np.float32) for d in resp.data]
 
 
-def chat(system: str, user: str, json_mode: bool = False) -> str:
+def chat(system: str, user: str, json_mode: bool = False, model: str | None = None) -> str:
     """Send one system + user message and return the reply text."""
     extra = {"response_format": {"type": "json_object"}} if json_mode else {}
     resp = client.chat.completions.create(
-        model=CHAT_MODEL,
+        model=model or CHAT_MODEL,
         temperature=0,
         messages=[
             {"role": "system", "content": system},
