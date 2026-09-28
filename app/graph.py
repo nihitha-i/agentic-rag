@@ -23,11 +23,11 @@ class RAGState(TypedDict, total=False):
 
 
 def router(state: RAGState) -> dict:
-    """Decide whether the question needs the documents."""
+    """Skip retrieval only for greetings and small talk."""
     out = chat(
-        "You route questions for a document Q&A system about Medicare. Reply in JSON as "
-                '{"route": "general"} ONLY for greetings or small talk. For EVERY other question, '
-                'including anything about health care, providers, costs or coverage, reply {"route": "documents"}.',
+        "You route messages for a document Q&A system about Medicare. Reply in JSON as "
+        '{"route": "general"} ONLY for greetings or small talk. For EVERY other question, '
+        'including anything about health care, providers, costs or coverage, reply {"route": "documents"}.',
         state["question"],
         json_mode=True,
     )
@@ -37,7 +37,7 @@ def router(state: RAGState) -> dict:
 
 def general(state: RAGState) -> dict:
     return {
-        "answer": "I answer questions about the loaded Medicare documents. Please ask about them.",
+        "answer": "Hi! I answer questions about Medicare coverage using official Medicare documents.",
         "docs": [],
         "queries": [],
         "supported": True,
@@ -50,10 +50,10 @@ def decompose(state: RAGState) -> dict:
     out = chat(
         "You plan searches over Medicare policy documents (Medicare & You handbook and the "
         "Medicare Benefit Policy Manual). Break the user's question into 1-3 short search "
-        "queries, one per distinct fact needed. Translate everyday words into official policy "
-        "terms (e.g. 'nursing home after a hospital stay' -> 'skilled nursing facility "
-        "extended care'). If feedback lists missing facts, add queries for them. "
-        'Reply in JSON: {"queries": ["...", "..."]}',
+        "queries, one per DISTINCT fact needed (not rephrasings of the same idea). Translate "
+        "everyday words into official policy terms (e.g. 'nursing home after a hospital stay' -> "
+        "'skilled nursing facility extended care'). If feedback lists missing facts, write "
+        'queries for exactly those facts. Reply in JSON: {"queries": ["...", "..."]}',
         f"Question: {state['question']}\nFeedback from the last attempt: {feedback or 'none'}",
         json_mode=True,
     )
@@ -76,10 +76,13 @@ def retrieve(state: RAGState) -> dict:
 
 def generate(state: RAGState) -> dict:
     reply = chat(
-        "Answer using only the numbered context. Answer EVERY part of the question. "
-        "Put a citation like [2] after every factual sentence. Include important exceptions "
-        "and conditions. If the context does not contain part of the answer, say which part "
-        "you could not find.",
+        "You answer Medicare questions using ONLY the numbered context.\n"
+        "- Answer every part of the question directly. If the context mentions something, "
+        "state it plainly; do not hedge with 'the context does not explicitly state'.\n"
+        "- Put a citation like [2] after every factual sentence.\n"
+        "- Include important exceptions and conditions.\n"
+        "- Never add facts from general knowledge. If the context does not cover a part of the "
+        "question, say in one sentence that the documents don't cover it, and stop there.",
         f"Context:\n{format_context(state['docs'])}\n\nQuestion: {state['question']}",
     )
     return {"answer": reply}
@@ -90,7 +93,7 @@ def verify(state: RAGState) -> dict:
     out = chat(
         "You are a strict fact checker. Check (1) whether every claim in the ANSWER is "
         "supported by the CONTEXT it cites, and (2) whether every part of the QUESTION is "
-        "answered. Reply in JSON: "
+        "answered or explicitly marked as not covered by the documents. Reply in JSON: "
         '{"supported": true or false, "feedback": "which claims are unsupported or which '
         'facts are missing"}',
         f"CONTEXT:\n{format_context(state['docs'])}\n\nQUESTION: {state['question']}\n\n"
@@ -100,10 +103,10 @@ def verify(state: RAGState) -> dict:
     result = json.loads(out)
     supported = bool(result.get("supported", False))
     update = {"supported": supported, "feedback": result.get("feedback", "")}
-    if not supported and state["attempts"] >= MAX_ATTEMPTS:
+    if not supported and state["attempts"] >= MAX_ATTEMPTS and update["feedback"]:
         update["answer"] = (
-            "I couldn't find a fully supported answer in the documents. "
-            f"Closest attempt:\n\n{state['answer']}"
+            f"{state['answer']}\n\nNote: the documents may not fully cover this: "
+            f"{update['feedback']}"
         )
     return update
 
@@ -152,7 +155,7 @@ def ask(question: str) -> dict:
 
 if __name__ == "__main__":
     import sys
-    q = " ".join(sys.argv[1:]) or "Does Medicare cover hearing aids?"
+    q = " ".join(sys.argv[1:]) or "Can a nurse-midwife provide services in a rural health clinic?"
     r = ask(q)
     print(r["answer"])
     print(f"\nSub-queries: {r['search_query']}")
@@ -160,4 +163,3 @@ if __name__ == "__main__":
     print("Sources:")
     for d in r["sources"]:
         print(f"- {d['source']} page {d['page']} (score {d['score']})")
-        
