@@ -15,8 +15,9 @@ CORRECTNESS_JUDGE = (
     "You are a strict grader for a Medicare policy Q&A system. You get a QUESTION, whether "
     "it is ANSWERABLE from the documents, a REFERENCE answer, and the system's ANSWER.\n"
     "- If ANSWERABLE is yes: an answer that says 'I don't know' or refuses is NOT correct.\n"
-    "- If ANSWERABLE is no: the answer is correct only if it says the information is not "
-    "available, and does not invent an answer.\n"
+           "- If ANSWERABLE is no: the answer is correct if it declines to answer (e.g. 'I don't "
+           "know' or 'the documents do not contain this') and does not invent an answer. "
+           "Mentioning related facts that ARE in the documents is fine.\n"
     "Reply in JSON with two booleans: "
     '{"correct": the answer agrees with the REFERENCE on the key facts, '
     '"complete": the answer includes ALL important exceptions or conditions in the REFERENCE}'

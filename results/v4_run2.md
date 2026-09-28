@@ -2,5 +2,5 @@ Eval set: eval/questions_hard.jsonl (19 answerable + 5 unanswerable), judge: gpt
 
 | system   |   accuracy |   completeness |   faithfulness |   avg_latency_s |   refused_unanswerable_% |
 |:---------|-----------:|---------------:|---------------:|----------------:|-------------------------:|
-| agent    |       84.2 |           63.2 |           84.2 |            6.28 |                      100 |
-| baseline |       78.9 |           52.6 |           89.5 |            1.47 |                      100 |
+| agent    |       68.4 |           52.6 |           84.2 |            6.43 |                      100 |
+| baseline |       78.9 |           52.6 |           94.7 |            1.56 |                      100 |
