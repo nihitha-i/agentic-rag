@@ -1,0 +1,11 @@
+openai>=1.40
+psycopg[binary]>=3.1
+pgvector>=0.3
+numpy
+pypdf>=4.0
+fastapi
+uvicorn[standard]
+python-dotenv
+langgraph>=0.2
+pandas
+tabulate
