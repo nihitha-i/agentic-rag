@@ -26,8 +26,8 @@ def router(state: RAGState) -> dict:
     """Decide whether the question needs the documents."""
     out = chat(
         "You route questions for a document Q&A system about Medicare. Reply in JSON as "
-        '{"route": "documents"} if answering needs facts from the documents, '
-        'or {"route": "general"} for greetings or questions unrelated to documents.',
+                '{"route": "general"} ONLY for greetings or small talk. For EVERY other question, '
+                'including anything about health care, providers, costs or coverage, reply {"route": "documents"}.',
         state["question"],
         json_mode=True,
     )

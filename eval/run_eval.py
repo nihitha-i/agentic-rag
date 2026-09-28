@@ -10,25 +10,41 @@ from app.graph import ask as agent_answer
 from app.llm import chat
 
 JUDGE_MODEL = "gpt-4o"
-JUDGE = (
-    "You are a strict grader for a RAG system that answers Medicare policy questions. "
-    "Reply in JSON with three booleans: "
-    '{"correct": the answer agrees with the REFERENCE on the key facts '
-    '(a correct "I don\'t know" for an unanswerable question counts as correct), '
-    '"complete": the answer includes ALL important exceptions or conditions in the REFERENCE, '
-    '"faithful": every claim in the answer is supported by the CONTEXT}.'
+
+CORRECTNESS_JUDGE = (
+    "You are a strict grader for a Medicare policy Q&A system. You get a QUESTION, whether "
+    "it is ANSWERABLE from the documents, a REFERENCE answer, and the system's ANSWER.\n"
+    "- If ANSWERABLE is yes: an answer that says 'I don't know' or refuses is NOT correct.\n"
+    "- If ANSWERABLE is no: the answer is correct only if it says the information is not "
+    "available, and does not invent an answer.\n"
+    "Reply in JSON with two booleans: "
+    '{"correct": the answer agrees with the REFERENCE on the key facts, '
+    '"complete": the answer includes ALL important exceptions or conditions in the REFERENCE}'
+)
+
+FAITHFULNESS_JUDGE = (
+    "You check whether an ANSWER is supported by the retrieved CONTEXT. Ignore whether the "
+    "answer is right in general; only ask: is every factual claim in the ANSWER stated in, "
+    "or directly implied by, the CONTEXT? An answer that only says it doesn't know is faithful. "
+    'Reply in JSON: {"faithful": true or false}'
 )
 
 
 def judge(q: dict, result: dict) -> dict:
-    out = chat(
-        JUDGE,
-        f"QUESTION: {q['question']}\nREFERENCE: {q['reference']}\n\n"
+    answerable = q["source"] is not None
+    grade = json.loads(chat(
+        CORRECTNESS_JUDGE,
+        f"QUESTION: {q['question']}\nANSWERABLE: {'yes' if answerable else 'no'}\n"
+        f"REFERENCE: {q['reference']}\n\nANSWER:\n{result['answer']}",
+        json_mode=True, model=JUDGE_MODEL,
+    ))
+    faith = json.loads(chat(
+        FAITHFULNESS_JUDGE,
         f"CONTEXT:\n{chr(10).join(result['contexts'])[:12000]}\n\nANSWER:\n{result['answer']}",
-        json_mode=True,
-        model=JUDGE_MODEL,
-    )
-    return json.loads(out)
+        json_mode=True, model=JUDGE_MODEL,
+    ))
+    grade["faithful"] = faith.get("faithful")
+    return grade
 
 
 def main():
@@ -58,7 +74,8 @@ def main():
     Path("results").mkdir(exist_ok=True)
     df.to_csv(f"results/{name}_details.csv", index=False)
 
-    summary = df.groupby("system").agg(
+    ans = df[df.answerable]
+    summary = ans.groupby("system").agg(
         accuracy=("correct", "mean"),
         completeness=("complete", "mean"),
         faithfulness=("faithful", "mean"),
@@ -70,8 +87,9 @@ def main():
     unans = df[~df.answerable].groupby("system")["correct"].mean().mul(100).round(1)
     summary["refused_unanswerable_%"] = unans
 
-    table = f"Eval set: {qfile} ({len(questions)} questions), judge: {JUDGE_MODEL}\n\n"
-    table += summary.to_markdown()
+    n_ans, n_un = int(ans.shape[0] / 2), int((~df.answerable).sum() / 2)
+    table = (f"Eval set: {qfile} ({n_ans} answerable + {n_un} unanswerable), "
+             f"judge: {JUDGE_MODEL}\n\n") + summary.to_markdown()
     Path(f"results/{name}_summary.md").write_text(table + "\n")
     print("\n" + table)
 
